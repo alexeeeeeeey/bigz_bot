@@ -11,7 +11,6 @@ from yarl import URL
 class Config(BaseSettings):
     sqlite_path: Path = Field(alias="SQLITE_PATH")
     bot_token: str = Field(alias="BOT_TOKEN")
-    api_base_url: URL = Field(alias="API_BASE_URL")
     booking_base_url: URL = Field(alias="BOOKING_BASE_URL")
 
     @field_validator("booking_base_url", mode="before")
